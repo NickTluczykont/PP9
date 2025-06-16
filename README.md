@@ -117,7 +117,8 @@ Reflection:
 
 * **Explain how each flowchart node maps to your C code.**
 
----
+![Screenshot 2025-06-16 163005](https://github.com/user-attachments/assets/2728d9cc-b484-4b50-bee3-98b87e7b20b8)
+
 
 ### Task 3: Code-to-Flowchart
 
@@ -155,15 +156,49 @@ Reflection:
    ```
 3. For each function, draw a **Mermaid** flowchart capturing loops, branches, and switch logic. Include your Mermaid code in a Markdown file under `solutions/`.
 
-**Example Skeleton:**
+**Example Skeleton:*
 
 ```mermaid
 graph TD
-  A[Start] --> B[Initialize]
-  B --> C{Condition}
-  ...
+  A[Start] --> B[Initialisiere: result = 1, i = 1]
+  B --> C{i <= x?}
+  C -- Nein --> I[return result]
+  C -- Ja --> D{i % 2 == 0?}
+  D -- Ja --> E[result += i]
+  D -- Nein --> F[result *= i]
+  E --> G{result > 1000?}
+  F --> G{result > 1000?}
+  G -- Ja --> H[result -= 100]
+  G -- Nein --> J
+  H --> J[Inkrementiere i: i++]
+  J --> C
 ```
 
----
+Zweite....
+
+
+```mermaid
+graph TD
+  A[Start] --> B[Initialisiere: state = 0, i = 0]
+  B --> C{i < len?}
+  C -- Nein --> H[Wechsle zu switch state]
+  C -- Ja --> D{arr i < 0?}
+  D -- Ja --> E[state = -1]
+  D -- Nein --> F{arr i == 0?}
+  F -- Ja --> G[state = 0]
+  F -- Nein --> K[state = 1]
+  E --> L{state == 1?}
+  G --> L
+  K --> L
+  L -- Ja --> M[break – Schleife abbrechen]
+  L -- Nein --> N[i++ / weiter]
+  M --> H
+  N --> C
+  H --> O{state == 1?}
+  O -- Ja --> P[return true]
+  O -- Nein --> Q[return false]
+```
+
+
 
 **Remember:** Stop after **90 minutes** and record where you stopped.
