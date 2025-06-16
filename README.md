@@ -73,8 +73,8 @@ cc -o solutions/use_switch solutions/use_switch.c
 ./solutions/use_if
 ./solutions/use_switch
 ```
+![Screenshot 2025-06-15 172659](https://github.com/user-attachments/assets/216c03d8-3325-46fd-8cb2-e474b73dfa3b)
 
----
 
 ### Task 2: Flowchart Implementation (Mermaid Diagram)
 
